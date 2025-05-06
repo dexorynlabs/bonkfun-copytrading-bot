@@ -1,5 +1,5 @@
 [package]
-name = "solana-vntr-pumpswap-copytrader"
+name = "pumpfun-pumpswap-copytrader"
 version = "0.1.0"
 edition = "2021"
 

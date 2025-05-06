@@ -1,7 +1,7 @@
 # Variables
 TARGET_X86_64 = x86_64-pc-windows-gnu
 TARGET_I686 = i686-pc-windows-gnu
-PROJECT_NAME = solana-vntr-pumpswap-copytrader # Change this to your project name
+PROJECT_NAME = pumpfun-pumpswap-copytrader # Change this to your project name
 CARGO = cargo
 
 # Target to install prerequisites
@@ -20,7 +20,7 @@ install:
 # pm2 to install prerequisites
 .PHONY: pm2
 pm2:
-	pm2 start target/release/solana-vntr-pumpswap-copytrader
+	pm2 start target/release/pumpfun-pumpswap-copytrader
 
 # Target to build for x86_64 Windows
 .PHONY: build-x86_64

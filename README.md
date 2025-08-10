@@ -47,4 +47,4 @@ A high-performance copy trading bot for Bonkfun built in Rust, designed to autom
 
 # Contact Me
 If you have any question or collaboration offer, feel free to text me. You're always welcome
-Telegram - [@hodlwarden](https://t.me/mooneagle)
+Telegram - [@solship](https://t.me/mooneagle)

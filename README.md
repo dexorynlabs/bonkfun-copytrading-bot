@@ -25,8 +25,8 @@ A high-performance copy trading bot for Bonkfun built in Rust, designed to autom
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/hodlwarden/bonkfun-copy-trading-bot-rust.git
-   cd bonkfun-copy-trading-bot-rust
+   git clone https://github.com/solship/bonkfun-Rust-CopyTrading-Bot.git
+   cd bonkfun-Rust-CopyTrading-Bot
 2. Complete config of .env
    Simply rename the .env.example to .env and fill all configs.
    ```bash
@@ -47,4 +47,4 @@ A high-performance copy trading bot for Bonkfun built in Rust, designed to autom
 
 # Contact Me
 If you have any question or collaboration offer, feel free to text me. You're always welcome
-Telegram - [@hodlwarden](https://t.me/hodlwarden)
+Telegram - [@hodlwarden](https://t.me/mooneagle)

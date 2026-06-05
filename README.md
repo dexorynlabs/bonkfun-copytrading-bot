@@ -72,7 +72,7 @@ Copy trading and on-chain automation carry financial and technical risk. This so
 - Discord: `dexoryn_`
 
 <p align="center">
-  <img src="dexoryn_tg.jpg" alt="Telegram QR code — @dexoryn" width="300"/>
+  <img src="dexoryn_tg.jpg" alt="Telegram QR code — @dexoryn" height="300"/>
   &nbsp;&nbsp;
-  <img src="dexoryn_wechat.png" alt="WeChat QR code — DexorynWe" width="300"/>
+  <img src="dexoryn_wechat.png" alt="WeChat QR code — DexorynWe" height="300"/>
 </p>

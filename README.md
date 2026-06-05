@@ -2,7 +2,7 @@
 
 ![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg)
 
-A Rust implementation of a copy-trading bot for **Bonkfun**, focused on mirroring trades from selected wallets with low latency and configurable execution. This project is developed and maintained by **[DexorynLabs](https://t.me/dexoryn_here)**.
+A Rust implementation of a copy-trading bot for **Bonkfun**, focused on mirroring trades from selected wallets with low latency and configurable execution. This project is developed and maintained by **[DexorynLabs](https://t.me/dexoryn)**.
 
 ## Features
 
@@ -68,4 +68,11 @@ Copy trading and on-chain automation carry financial and technical risk. This so
 
 **DexorynLabs** — questions, integrations, or collaboration:
 
-- Telegram: [@dexoryn_here](https://t.me/dexoryn_here)
+- Telegram: [@dexoryn](https://t.me/dexoryn)
+- Discord: `dexoryn_`
+
+<p align="center">
+  <img src="dexoryn_tg.jpg" alt="Telegram QR code — @dexoryn" width="300"/>
+  &nbsp;&nbsp;
+  <img src="dexoryn_wechat.png" alt="WeChat QR code — DexorynWe" width="300"/>
+</p>
